@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import DATA from "../../dummy.json";
+// import DATA from "../../dummy.json";
 
 // interface MakhanaVariety {
 //   name: string;
@@ -26,7 +26,7 @@ const MakhanaList = () => {
 
   return (
     <div>
-      {DATA.map((type) => (
+      {/* {DATA.map((type) => (
         <div key={type.type}>
           <h2>{type.type}</h2>
           {type.varieties.map((variety) => (
@@ -40,7 +40,7 @@ const MakhanaList = () => {
             </div>
           ))}
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
