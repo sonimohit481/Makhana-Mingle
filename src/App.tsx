@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import ReactGA from "react-ga";
 import { Helmet } from "react-helmet-async";
+// import MakhanaList from "./components/MakhanaList";
+import Navbar from "./components/Navbar";
+import ProductDetail from "./components/ProductDetail";
+import { ProductInfo } from "./components/ProductInfo";
+import { ProductReview } from "./components/ProductReview";
+import { ProductsCard } from "./components/ProductsCard";
+import CategorySection from "./components/CategorySection";
+import Footer from "./components/Footer";
 
 const GOOGLE_ANALYTICS_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 const ENV = import.meta.env.VITE_ENV;
@@ -33,8 +41,14 @@ function App() {
         <meta property="og:image" content="/images/makhana.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <h1 className="text-4xl font-bold">Welcome to MakhanaMingle</h1>
-      <p>Buy the best quality Makhana here!</p>
+      <Navbar />
+      {/* <MakhanaList /> */}
+      <ProductDetail />
+      <ProductInfo />
+      <ProductReview />
+      <ProductsCard />
+      <CategorySection />
+      <Footer />
     </div>
   );
 }

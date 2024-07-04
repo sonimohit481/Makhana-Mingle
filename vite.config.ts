@@ -16,5 +16,8 @@ export default defineConfig(({ mode }) => {
     define: {
       "process.env": env,
     },
+    server: {
+      host: true,
+    },
   };
 });
