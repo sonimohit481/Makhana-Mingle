@@ -253,6 +253,9 @@ function App() {
                   Shop Now
                 </a>
               </div>
+              <p className="mt-4 text-sm text-[#8b7462]">
+                Patna-born inspiration, crafted for modern Indian shelves.
+              </p>
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
                 {[
                   ["100%", "wholegrain roasted"],
@@ -521,6 +524,9 @@ function App() {
                 Subscribe
               </button>
             </form>
+            <p className="mt-4 text-xs uppercase tracking-[0.22em] text-[#7f5c26]">
+              No spam, only pantry notes worth opening
+            </p>
           </div>
         </section>
       </main>
@@ -534,9 +540,9 @@ function App() {
               slow-crafted pantry experiences.
             </p>
             <div className="mt-5 flex gap-3 text-sm text-[#6d5848]">
-              <a href="/">Instagram</a>
-              <a href="/">Pinterest</a>
-              <a href="/">LinkedIn</a>
+              <a href="#newsletter">Instagram</a>
+              <a href="#recipes">Pinterest</a>
+              <a href="#story">LinkedIn</a>
             </div>
           </div>
           <div>
