@@ -144,8 +144,9 @@ export default function Home() {
     <div className="site-shell grain-overlay">
       <header className="topbar">
         <div className="container topbar-inner">
-          <a href="#top" className="brand-wordmark">
-            Makhana Mingle
+          <a href="#top" className="brand-lockup">
+            <Image src="/logo-mark.svg" alt="Makhana Mingle logo" width={44} height={44} />
+            <span className="brand-wordmark">Makhana Mingle</span>
           </a>
           <nav className="nav-links" aria-label="Primary">
             {navLinks.map((link) => (
@@ -200,8 +201,14 @@ export default function Home() {
             </div>
 
             <div className="hero-visual-wrap">
-              <div className="hero-bowl-card" aria-hidden="true">
-                <div className="hero-bowl-illustration" />
+              <div className="hero-bowl-card">
+                <Image
+                  src="/hero-bowl.svg"
+                  alt="Illustration of a premium bowl of roasted makhana"
+                  fill
+                  className="hero-image"
+                  priority
+                />
               </div>
               <div className="glass-card hero-note hero-note-left">
                 <p className="note-title">Fresh Roast</p>
@@ -400,7 +407,10 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <p className="brand-wordmark footer-brand">Makhana Mingle</p>
+            <div className="brand-lockup footer-lockup">
+              <Image src="/logo-mark.svg" alt="Makhana Mingle logo" width={44} height={44} />
+              <p className="brand-wordmark footer-brand">Makhana Mingle</p>
+            </div>
             <p className="footer-copy">
               A modern Indian food brand shaping healthier snacking through makhana, recipes, and
               slow-crafted pantry experiences.
@@ -440,3 +450,4 @@ export default function Home() {
     </div>
   );
 }
+import Image from "next/image";

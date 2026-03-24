@@ -1,0 +1,36 @@
+<svg width="960" height="960" viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="960" rx="120" fill="url(#bg)"/>
+  <circle cx="722" cy="204" r="116" fill="#FFD978" fill-opacity="0.18"/>
+  <circle cx="252" cy="228" r="96" fill="#FFF5DC" fill-opacity="0.42"/>
+  <ellipse cx="480" cy="748" rx="254" ry="58" fill="#2A170D" fill-opacity="0.18"/>
+  <path d="M244 626C244 731.413 349.587 817 480 817C610.413 817 716 731.413 716 626V566H244V626Z" fill="url(#bowl)"/>
+  <ellipse cx="480" cy="566" rx="236" ry="82" fill="#8E5F3C"/>
+  <ellipse cx="480" cy="550" rx="212" ry="62" fill="#FFF3D7"/>
+  <g opacity="0.98">
+    <ellipse cx="404" cy="490" rx="28" ry="23" fill="#FFF8EA"/>
+    <ellipse cx="455" cy="458" rx="28" ry="23" fill="#F9E4B8"/>
+    <ellipse cx="516" cy="458" rx="28" ry="23" fill="#F7DCA5"/>
+    <ellipse cx="570" cy="490" rx="28" ry="23" fill="#FFF0CB"/>
+    <ellipse cx="352" cy="538" rx="28" ry="23" fill="#F6DEAD"/>
+    <ellipse cx="410" cy="540" rx="28" ry="23" fill="#FFF6DF"/>
+    <ellipse cx="470" cy="526" rx="28" ry="23" fill="#F4D69E"/>
+    <ellipse cx="530" cy="528" rx="28" ry="23" fill="#FFF1CF"/>
+    <ellipse cx="590" cy="538" rx="28" ry="23" fill="#F0D198"/>
+    <ellipse cx="377" cy="590" rx="28" ry="23" fill="#FFF5DB"/>
+    <ellipse cx="439" cy="592" rx="28" ry="23" fill="#F3D8A6"/>
+    <ellipse cx="500" cy="592" rx="28" ry="23" fill="#FFF0C9"/>
+    <ellipse cx="562" cy="592" rx="28" ry="23" fill="#EFCB90"/>
+  </g>
+  <path d="M266 214C330 150.667 401.333 119 480 119C558.667 119 630 150.667 694 214" stroke="#D39A44" stroke-width="9" stroke-linecap="round" stroke-dasharray="2 22"/>
+  <defs>
+    <linearGradient id="bg" x1="118" y1="72" x2="804" y2="884" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3F2819"/>
+      <stop offset="0.52" stop-color="#6E4831"/>
+      <stop offset="1" stop-color="#23140D"/>
+    </linearGradient>
+    <linearGradient id="bowl" x1="480" y1="566" x2="480" y2="817" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9C6B47"/>
+      <stop offset="1" stop-color="#543523"/>
+    </linearGradient>
+  </defs>
+</svg>

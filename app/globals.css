@@ -109,6 +109,17 @@ img {
   font-family: var(--font-display);
 }
 
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-lockup img {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
 .topbar {
   position: sticky;
   top: 0;
@@ -344,46 +355,16 @@ img {
   position: relative;
   border-radius: 2.1rem;
   min-height: 26rem;
-  background:
-    radial-gradient(circle at 50% 16%, rgba(255, 255, 255, 0.92), transparent 24%),
-    linear-gradient(160deg, #3f2819 0%, #6e4831 46%, #23140d 100%);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
-
-.hero-bowl-illustration,
 .art-panel::after,
 .product-pack-bowl {
   border-radius: 50%;
 }
 
-.hero-bowl-illustration {
-  position: absolute;
-  inset: 11% 14% 24%;
-  background:
-    radial-gradient(circle at 50% 40%, #fff8ea 0 10%, transparent 10.5%),
-    radial-gradient(circle at 34% 58%, #f5e1b6 0 6.8%, transparent 7.2%),
-    radial-gradient(circle at 52% 56%, #f6e5c0 0 7.5%, transparent 8%),
-    radial-gradient(circle at 66% 50%, #edd7a3 0 7%, transparent 7.5%),
-    radial-gradient(circle at 42% 44%, #fff3d5 0 7.4%, transparent 7.8%),
-    radial-gradient(circle at 60% 34%, #f3ddb2 0 6.8%, transparent 7.3%),
-    radial-gradient(circle at 24% 42%, #efd7a4 0 6.5%, transparent 7%),
-    radial-gradient(circle at 72% 62%, #ffe8bb 0 7.2%, transparent 7.7%),
-    radial-gradient(circle at 52% 72%, #ebd29c 0 7.1%, transparent 7.5%),
-    radial-gradient(circle at 28% 70%, #fff1ce 0 6.8%, transparent 7.2%),
-    radial-gradient(circle at 50% 90%, #69442c 0 25%, transparent 25.4%);
-  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.16));
-}
-
-.hero-bowl-card::after {
-  content: "";
-  position: absolute;
-  left: 17%;
-  right: 17%;
-  bottom: 9%;
-  height: 16%;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #996845, #563724);
+.hero-image {
+  object-fit: cover;
 }
 
 .hero-note {
@@ -837,6 +818,10 @@ img {
 .footer-brand {
   margin: 0;
   font-size: 1.6rem;
+}
+
+.footer-lockup {
+  margin-bottom: 0.4rem;
 }
 
 .footer-copy {
