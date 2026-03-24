@@ -9,17 +9,20 @@ const categories = [
   {
     title: "Flavored Makhana",
     description: "Bold seasoning blends for evening cravings, gifting trays, and modern pantry shelves.",
-    artClass: "art-roast",
+    image: "/recipe-roast.svg",
+    alt: "Illustrated bowl of masala roasted makhana",
   },
   {
     title: "Traditional Recipes",
     description: "Slow, rooted comfort inspired by home kitchens, festive desserts, and Bihar memory.",
-    artClass: "art-kheer",
+    image: "/recipe-kheer.svg",
+    alt: "Illustrated bowl of creamy makhana kheer",
   },
   {
     title: "Diet Snacks",
     description: "Light, crisp combinations designed for mindful daily snacking and easy pairings.",
-    artClass: "art-mix",
+    image: "/recipe-mix.svg",
+    alt: "Illustrated bowl of makhana trail mix",
   },
 ];
 
@@ -28,19 +31,22 @@ const recipes = [
     title: "Masala Roast Bowl",
     accent: "10 min recipe",
     description: "Chilli, curry leaf, and toasted makhana for a quick chai-time crunch with proper depth.",
-    artClass: "art-roast",
+    image: "/recipe-roast.svg",
+    alt: "Illustrated masala roasted makhana recipe",
   },
   {
     title: "Makhana Kheer",
     accent: "Festive favorite",
     description: "A creamy dessert with cardamom, saffron, and a delicate nutty bite that still feels familiar.",
-    artClass: "art-kheer",
+    image: "/recipe-kheer.svg",
+    alt: "Illustrated makhana kheer recipe",
   },
   {
     title: "Trail Mix Chaat",
     accent: "Protein rich",
     description: "Fox nuts, seeds, herbs, and citrus for an energizing afternoon bite with sharper texture.",
-    artClass: "art-mix",
+    image: "/recipe-mix.svg",
+    alt: "Illustrated makhana trail mix bowl",
   },
 ];
 
@@ -232,7 +238,9 @@ export default function Home() {
             <div className="card-grid three-up">
               {categories.map((category) => (
                 <article key={category.title} className="glass-card feature-card">
-                  <div className={`art-panel ${category.artClass}`} />
+                  <div className="art-panel art-image-panel">
+                    <Image src={category.image} alt={category.alt} fill className="art-image" />
+                  </div>
                   <h3>{category.title}</h3>
                   <p>{category.description}</p>
                 </article>
@@ -251,7 +259,9 @@ export default function Home() {
             <div className="card-grid three-up">
               {recipes.map((recipe) => (
                 <article key={recipe.title} className="glass-card recipe-card">
-                  <div className={`art-panel ${recipe.artClass}`} />
+                  <div className="art-panel art-image-panel">
+                    <Image src={recipe.image} alt={recipe.alt} fill className="art-image" />
+                  </div>
                   <div className="recipe-meta">
                     <h3>{recipe.title}</h3>
                     <span>{recipe.accent}</span>
@@ -336,6 +346,14 @@ export default function Home() {
             <article className="glass-card map-card">
               <p className="section-eyebrow">Bihar Origin</p>
               <div className="map-panel">
+                <div className="story-image-wrap">
+                  <Image
+                    src="/bihar-pond.svg"
+                    alt="Illustrated Bihar pond landscape inspired by makhana cultivation"
+                    fill
+                    className="story-image"
+                  />
+                </div>
                 <div className="map-top">
                   <div>
                     <h3>Darbhanga</h3>

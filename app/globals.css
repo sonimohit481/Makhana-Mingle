@@ -480,6 +480,15 @@ img {
   inset: 14% 18% 22%;
 }
 
+.art-image-panel::before,
+.art-image-panel::after {
+  display: none;
+}
+
+.art-image {
+  object-fit: cover;
+}
+
 .art-roast::after {
   background:
     radial-gradient(circle at 50% 38%, #fff8ea 0 12%, transparent 12.4%),
@@ -704,6 +713,19 @@ img {
   border: 1px solid #ead8c3;
   background: rgba(255, 255, 255, 0.78);
   padding: 1.45rem;
+}
+
+.story-image-wrap {
+  position: relative;
+  min-height: 12rem;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ead8c3;
+}
+
+.story-image {
+  object-fit: cover;
 }
 
 .map-top {
