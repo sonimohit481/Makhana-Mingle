@@ -1,3 +1,6 @@
+import Image from "next/image";
+import FooterInfoModal from "@/components/footer-info-modal";
+
 const navLinks = [
   { label: "Recipes", href: "#recipes" },
   { label: "Benefits", href: "#benefits" },
@@ -146,6 +149,35 @@ function SectionHeading({
 }
 
 export default function Home() {
+  const developerDetails = {
+    title: "About the Developer",
+    description:
+      "Mohit Soni is a React Native and frontend developer building scalable mobile apps and modern web applications with React, Expo, and Next.js.",
+    bullets: [
+      "Public portfolio title: React Native & Frontend Developer.",
+      "Publicly highlighted stack: React, React Native, Next.js, TypeScript, Node.js, Expo, Redux, Git.",
+      "Public work reference: PPFAS Mutual Fund.",
+      "Public email: sonimohit481@gmail.com.",
+    ],
+    links: [
+      { href: "https://mohitsoni.dev", label: "Portfolio" },
+      { href: "https://github.com/sonimohit481", label: "GitHub" },
+      { href: "https://www.linkedin.com/in/mohitsoni481/", label: "LinkedIn" },
+    ],
+  };
+
+  const projectDetails = {
+    title: "About the Project",
+    description:
+      "Makhana Mingle is being built as a premium modern Indian food brand website that can carry both editorial storytelling and e-commerce in one system.",
+    bullets: [
+      "Built on Next.js App Router with a custom mobile-first UI.",
+      "Designed to support recipes, health education, product merchandising, and Bihar-rooted storytelling.",
+      "Uses brand-owned makhana illustrations and a warm premium visual language.",
+      "Prepared for future layers like product pages, cart flow, and deeper content routes.",
+    ],
+  };
+
   return (
     <div className="site-shell grain-overlay">
       <header className="topbar">
@@ -438,6 +470,21 @@ export default function Home() {
               <a href="#recipes">Pinterest</a>
               <a href="#story">LinkedIn</a>
             </div>
+            <div className="footer-modal-actions">
+              <FooterInfoModal
+                title={developerDetails.title}
+                description={developerDetails.description}
+                bullets={developerDetails.bullets}
+                links={developerDetails.links}
+                triggerLabel="About the Developer"
+              />
+              <FooterInfoModal
+                title={projectDetails.title}
+                description={projectDetails.description}
+                bullets={projectDetails.bullets}
+                triggerLabel="About the Project"
+              />
+            </div>
           </div>
           <div>
             <p className="footer-heading">Shop</p>
@@ -459,8 +506,8 @@ export default function Home() {
             <p className="footer-heading">Contact</p>
             <div className="footer-stack">
               <a href="mailto:hello@makhanamingle.com">hello@makhanamingle.com</a>
-              <p>Patna and Bengaluru</p>
-              <p>+91 98765 43210</p>
+              <p>Gurgaon</p>
+              <p>+91 94682 09127</p>
             </div>
           </div>
         </div>
@@ -468,4 +515,3 @@ export default function Home() {
     </div>
   );
 }
-import Image from "next/image";

@@ -864,6 +864,120 @@ img {
   margin-top: 1rem;
 }
 
+.footer-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.footer-modal-trigger {
+  border: 1px solid #e0cfb5;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #5f4835;
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.footer-modal-trigger:hover,
+.footer-dialog-links a:hover,
+.footer-dialog-close:hover {
+  transform: translateY(-2px);
+}
+
+.footer-dialog {
+  width: min(42rem, calc(100% - 2rem));
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.footer-dialog::backdrop {
+  background: rgba(51, 33, 18, 0.42);
+  backdrop-filter: blur(6px);
+}
+
+.footer-dialog-card {
+  border-radius: 2rem;
+  border: 1px solid #ead8c3;
+  background: linear-gradient(180deg, rgba(255, 251, 244, 0.98), rgba(255, 245, 229, 0.98));
+  box-shadow: 0 30px 70px rgba(68, 42, 22, 0.16);
+  padding: 1.5rem;
+}
+
+.footer-dialog-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-dialog-top h3 {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  letter-spacing: -0.03em;
+}
+
+.footer-dialog-close {
+  border: 1px solid #e0cfb5;
+  border-radius: 999px;
+  background: white;
+  color: #5f4835;
+  padding: 0.7rem 0.95rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.footer-dialog-copy {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.footer-dialog-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.footer-dialog-point {
+  border-radius: 1.1rem;
+  border: 1px solid #ead8c3;
+  background: rgba(255, 255, 255, 0.78);
+  color: #6b5544;
+  line-height: 1.7;
+  padding: 0.9rem 1rem;
+}
+
+.footer-dialog-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.footer-dialog-links a {
+  border-radius: 999px;
+  background: #3f2b1f;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  transition: transform 180ms ease;
+}
+
 .footer-heading {
   margin: 0 0 0.8rem;
   color: #a07a56;
