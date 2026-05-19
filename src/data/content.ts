@@ -321,7 +321,6 @@ export const footerSections: FooterSection[] = [
     title: "Developer",
     links: [
       { label: "Mohit's Portfolio", href: "https://mohitsoni.dev" },
-      { label: "View Source Code", href: "https://github.com/sonimohit481/Makhana-Mingle" },
       { label: "Contact Developer", href: "mailto:mohit@getlon.com" },
     ],
   },
