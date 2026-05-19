@@ -228,14 +228,18 @@ export const testimonials: Testimonial[] = [
 
 export const youtubeVideos: YouTubeVideos = {
   recipes: [
-    { id: "myqJYMPyJRI", title: "Air Fryer Roasted Makhana" },
-    { id: "QLZlEHEmPrE", title: "Masala Makhana Recipe" },
-    { id: "xKJ7cYDq8mA", title: "Makhana Kheer Full Recipe" },
-    { id: "8h3XKzXjYqE", title: "Crispy Makhana Chivda" },
+    { id: "FptzrPb6hN0", title: "Makhana Snacks Recipe" },
+    { id: "GnGE8J3yvV0", title: "Crispy Makhana Recipe" },
+    { id: "kkgp99-PyY4", title: "Roasted Makhana Delight" },
+    { id: "zjcq_zr1VkA", title: "Spicy Makhana Snack" },
+    { id: "61QsFagn03w", title: "Makhana Magic Recipe" },
+    { id: "ggYahgeS9p0", title: "Makhana Shorts" },
+    { id: "wMiRaFvsrm0", title: "Quick Makhana Snack" },
+    { id: "oDCTmWCETvs", title: "Makhana Crunch" },
   ],
   health: [
-    { id: "P6j9Ku6rRgw", title: "Makhana Health Benefits" },
-    { id: "K9hHj7sL2wM", title: "Why Makhana is a Superfood" },
+    { id: "shwSsrRTofM", title: "Makhana Health Benefits" },
+    { id: "_yU3yEVjEP8", title: "Why Makhana is Superfood" },
   ],
   story: [
     { id: "0A7eL3pZyHw", title: "Bihar's Makhana & The Wetlands" },
