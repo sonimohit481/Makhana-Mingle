@@ -1,303 +1,316 @@
-import Image from "next/image";
-import FooterInfoModal from "@/components/footer-info-modal";
-
 const navLinks = [
+  { label: "Shop", href: "#shop" },
   { label: "Recipes", href: "#recipes" },
   { label: "Benefits", href: "#benefits" },
-  { label: "Shop", href: "#shop" },
   { label: "Story", href: "#story" },
 ];
 
 const categories = [
   {
     title: "Flavored Makhana",
-    description: "Bold seasoning blends for evening cravings, gifting trays, and modern pantry shelves.",
-    image: "/recipe-roast.svg",
-    alt: "Illustrated bowl of masala roasted makhana",
+    description: "Bold seasoning blends for evening cravings and modern pantry shelves.",
+    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&h=750&fit=crop",
   },
   {
     title: "Traditional Recipes",
-    description: "Slow, rooted comfort inspired by home kitchens, festive desserts, and Bihar memory.",
-    image: "/recipe-kheer.svg",
-    alt: "Illustrated bowl of creamy makhana kheer",
+    description: "Slow, rooted comfort inspired by home kitchens and festive desserts.",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&h=750&fit=crop",
   },
   {
     title: "Diet Snacks",
-    description: "Light, crisp combinations designed for mindful daily snacking and easy pairings.",
-    image: "/recipe-mix.svg",
-    alt: "Illustrated bowl of makhana trail mix",
-  },
-];
-
-const recipes = [
-  {
-    title: "Masala Roast Bowl",
-    accent: "10 min recipe",
-    description: "Chilli, curry leaf, and toasted makhana for a quick chai-time crunch with proper depth.",
-    image: "/recipe-roast.svg",
-    alt: "Illustrated masala roasted makhana recipe",
-  },
-  {
-    title: "Makhana Kheer",
-    accent: "Festive favorite",
-    description: "A creamy dessert with cardamom, saffron, and a delicate nutty bite that still feels familiar.",
-    image: "/recipe-kheer.svg",
-    alt: "Illustrated makhana kheer recipe",
-  },
-  {
-    title: "Trail Mix Chaat",
-    accent: "Protein rich",
-    description: "Fox nuts, seeds, herbs, and citrus for an energizing afternoon bite with sharper texture.",
-    image: "/recipe-mix.svg",
-    alt: "Illustrated makhana trail mix bowl",
-  },
-];
-
-const benefits = [
-  {
-    title: "Low Calories",
-    description: "Light enough for everyday snacking without the greasy after-feel.",
-    icon: "○",
-  },
-  {
-    title: "High Protein",
-    description: "A pantry staple that supports balanced energy throughout the day.",
-    icon: "▥",
-  },
-  {
-    title: "Antioxidants",
-    description: "Naturally nourishing, with ancient wellness appeal in every roasted bite.",
-    icon: "✦",
-  },
-  {
-    title: "Heart Friendly",
-    description: "A cleaner, crunchy alternative to fried snacks for easy indulgence.",
-    icon: "♥",
+    description: "Light, crisp combinations designed for mindful daily snacking.",
+    image: "https://images.unsplash.com/photo-1608492683726-1280ac73f860?w=600&h=750&fit=crop",
   },
 ];
 
 const products = [
   {
-    title: "Roasted Salt & Pepper",
-    note: "Classic everyday crunch",
-    price: "Rs. 249",
-    packClass: "pack-gold",
+    title: "Classic Himalayan Salt",
+    note: "Roasted to golden perfection with sea salt",
+    price: "₹249",
+    badge: "BESTSELLER",
+    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&h=400&fit=crop",
   },
   {
-    title: "Saffron Spice Mix",
-    note: "Warm festive seasoning",
-    price: "Rs. 299",
-    packClass: "pack-saffron",
+    title: "Spicy Peri Peri",
+    note: "Fiery blend of African birds eye chili",
+    price: "₹279",
+    image: "https://images.unsplash.com/photo-1603052879368-f2927f4c2e13?w=400&h=400&fit=crop",
   },
   {
-    title: "Mint Pudina Crisp",
-    note: "Fresh herb-forward roast",
-    price: "Rs. 279",
-    packClass: "pack-green",
+    title: "Creamy Cheese",
+    note: "Rich white cheddar with herbs",
+    price: "₹299",
+    image: "https://images.unsplash.com/photo-1606284305952-d5af49a20404?w=400&h=400&fit=crop",
   },
   {
-    title: "Jaggery Caramel Pop",
-    note: "Sweet meets toasty",
-    price: "Rs. 329",
-    packClass: "pack-caramel",
+    title: "Mint Pudina",
+    note: "Refreshing mint and lemon twist",
+    price: "₹259",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=400&fit=crop",
+  },
+];
+
+const benefits = [
+  {
+    title: "High Protein",
+    description: "Essential for muscle repair and sustained energy throughout the day.",
+    icon: "💪",
+  },
+  {
+    title: "Heart Friendly",
+    description: "Low sodium and cholesterol for a healthy heart.",
+    icon: "❤️",
+  },
+  {
+    title: "Antioxidants",
+    description: "Rich in minerals to fight oxidative stress naturally.",
+    icon: "🌿",
+  },
+  {
+    title: "Low Calories",
+    description: "The perfect guilt-free snack for mindful eating.",
+    icon: "⚖️",
+  },
+];
+
+const recipes = [
+  {
+    title: "Masala Roast Makhana",
+    description: "Chilli, curry leaf, and toasted makhana for a quick chai-time crunch.",
+    image: "https://images.unsplash.com/photo-1606284305952-d5af49a20404?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Makhana Kheer",
+    description: "A creamy dessert with cardamom, saffron, and nutty bite.",
+    image: "https://images.unsplash.com/photo-1603052879368-f2927f4c2e13?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Trail Mix Chaat",
+    description: "Fox nuts, seeds, herbs, and citrus for an energizing afternoon bite.",
+    image: "https://images.unsplash.com/photo-1608492683726-1280ac73f860?w=600&h=400&fit=crop",
   },
 ];
 
 const testimonials = [
   {
-    quote:
-      "The flavor feels premium but still rooted in home. It is the only snack my mom and my gym friends both steal.",
+    quote: "The flavor feels premium but still rooted in home. It is the only snack my mom and my gym friends both steal.",
     name: "Ritika Sharma",
-    detail: "Mumbai, wellness consultant",
+    role: "Mumbai, wellness consultant",
   },
   {
-    quote:
-      "Their roasted makhana made healthy gifting finally feel elegant. The textures and seasoning feel properly considered.",
+    quote: "Their roasted makhana made healthy gifting finally feel elegant. The textures and seasoning feel properly considered.",
     name: "Aman Verma",
-    detail: "Bengaluru, startup operator",
+    role: "Bengaluru, startup operator",
   },
   {
-    quote:
-      "I came for the snack, stayed for the recipes. The kheer recipe turned into a Diwali staple at our place.",
+    quote: "I came for the snack, stayed for the recipes. The kheer recipe turned into a Diwali staple at our place.",
     name: "Neha Sinha",
-    detail: "Patna, food writer",
+    role: "Patna, food writer",
   },
 ];
 
-const storyPoints = [
-  "Sourced from ponds across Bihar, where makhana cultivation has deep generational roots.",
-  "Roasted in smaller batches to keep the bite airy, crisp, and naturally satisfying.",
-  "Built as a modern Indian pantry brand balancing wellness, nostalgia, and design.",
-];
-
-function SectionHeading({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="section-heading">
-      <p className="section-eyebrow">{eyebrow}</p>
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
-  );
-}
+const youtubeVideos = {
+  recipes: [
+    { id: "myqJYMPyJRI", title: "Air Fryer Roasted Makhana" },
+    { id: "QLZlEHEmPrE", title: "Masala Makhana Recipe" },
+  ],
+  health: [
+    { id: "P6j9Ku6rRgw", title: "Makhana Health Benefits" },
+  ],
+  story: [
+    { id: "0A7eL3pZyHw", title: "Bihar's Makhana & The Wetlands" },
+  ],
+};
 
 export default function Home() {
-  const developerDetails = {
-    title: "About the Developer",
-    description:
-      "Mohit Soni is a React Native and frontend developer building scalable mobile apps and modern web applications with React, Expo, and Next.js.",
-    bullets: [
-      "Public portfolio title: React Native & Frontend Developer.",
-      "Publicly highlighted stack: React, React Native, Next.js, TypeScript, Node.js, Expo, Redux, Git.",
-      "Public work reference: PPFAS Mutual Fund.",
-      "Public email: sonimohit481@gmail.com.",
-    ],
-    links: [
-      { href: "https://mohitsoni.dev", label: "Portfolio" },
-      { href: "https://github.com/sonimohit481", label: "GitHub" },
-      { href: "https://www.linkedin.com/in/mohitsoni481/", label: "LinkedIn" },
-    ],
-  };
-
-  const projectDetails = {
-    title: "About the Project",
-    description:
-      "Makhana Mingle is being built as a premium modern Indian food brand website that can carry both editorial storytelling and e-commerce in one system.",
-    bullets: [
-      "Built on Next.js App Router with a custom mobile-first UI.",
-      "Designed to support recipes, health education, product merchandising, and Bihar-rooted storytelling.",
-      "Uses brand-owned makhana illustrations and a warm premium visual language.",
-      "Prepared for future layers like product pages, cart flow, and deeper content routes.",
-    ],
-  };
-
   return (
-    <div className="site-shell grain-overlay">
-      <header className="topbar">
-        <div className="container topbar-inner">
-          <a href="#top" className="brand-lockup">
-            <Image src="/logo-mark.svg" alt="Makhana Mingle logo" width={44} height={44} />
-            <span className="brand-wordmark">Makhana Mingle</span>
+    <div className="site-shell">
+      {/* Top Navigation */}
+      <nav className="topnav">
+        <div className="container nav-container">
+          <a href="#top" className="brand">
+            Makhana Mingle
           </a>
           <nav className="nav-links" aria-label="Primary">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href}>
+              <a key={link.label} href={link.href} className="nav-link">
                 {link.label}
               </a>
             ))}
           </nav>
-          <a href="#shop" className="nav-cta">
-            Shop Now
-          </a>
+          <div className="nav-actions">
+            <button className="cart-btn" aria-label="Cart">
+              🛒
+            </button>
+            <a href="#shop" className="login-btn">
+              Login
+            </a>
+          </div>
         </div>
-      </header>
+      </nav>
 
       <main id="top">
-        <section className="hero section">
-          <div className="hero-glow glow-left" />
-          <div className="hero-glow glow-right" />
-          <div className="container hero-grid">
-            <div className="hero-copy">
-              <p className="pill-label">Premium Indian Snacking</p>
-              <h1>Snack Smart with Makhana</h1>
+        {/* Hero Section */}
+        <section className="hero">
+          <div className="hero-glow hero-glow-1"></div>
+          <div className="hero-glow hero-glow-2"></div>
+          <div className="container hero-container">
+            <div className="hero-content">
+              <span className="pill-label">Premium Indian Snacking</span>
+              <h1>
+                Snack Smart <br />
+                with <span className="highlight">Makhana</span>
+              </h1>
               <p className="hero-text">
-                Healthy. Crunchy. Delicious. Thoughtfully roasted fox nuts with a warm pantry
-                story, playful recipes, and everyday wellness built in.
+                Healthy. Crunchy. Delicious. Thoughtfully roasted fox nuts with a warm pantry story, playful recipes, and everyday wellness built in.
               </p>
-              <div className="hero-actions">
-                <a href="#recipes" className="button button-dark">
-                  Explore Recipes
-                </a>
-                <a href="#shop" className="button button-gold">
+              <div className="hero-buttons">
+                <a href="#shop" className="btn btn-primary">
                   Shop Now
                 </a>
+                <a href="#recipes" className="btn btn-secondary">
+                  Explore Recipes
+                </a>
               </div>
-              <p className="hero-subline">
-                Patna-born inspiration, crafted for modern Indian shelves.
-              </p>
-              <div className="hero-stats">
-                <article className="glass-card stat-card">
-                  <strong>100%</strong>
-                  <span>wholegrain roasted</span>
-                </article>
-                <article className="glass-card stat-card">
-                  <strong>12g</strong>
-                  <span>protein-led pairings</span>
-                </article>
-                <article className="glass-card stat-card">
-                  <strong>Bihar</strong>
-                  <span>heritage sourcing</span>
-                </article>
-              </div>
+              <p className="hero-sub">Patna-born inspiration, crafted for modern Indian shelves.</p>
             </div>
-
-            <div className="hero-visual-wrap">
-              <div className="hero-bowl-card">
-                <Image
-                  src="/hero-bowl.svg"
-                  alt="Illustration of a premium bowl of roasted makhana"
-                  fill
-                  className="hero-image"
-                  priority
+            <div className="hero-visual">
+              <div className="hero-image-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&h=600&fit=crop" 
+                  alt="Roasted Makhana" 
                 />
               </div>
-              <div className="glass-card hero-note hero-note-left">
-                <p className="note-title">Fresh Roast</p>
-                <p>Butter yellow crunch with a clean ingredient list.</p>
-              </div>
-              <div className="glass-card hero-note hero-note-right">
-                <p className="note-title">Mindful Snack</p>
-                <p>Low oil, high crunch, no heaviness.</p>
+              <div className="hero-badge">
+                <span className="badge-icon">🌿</span>
+                <div>
+                  <strong>100% Organic</strong>
+                  <span>Naturally Sourced</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="section">
-          <div className="container sand-panel">
-            <SectionHeading
-              eyebrow="Categories"
-              title="Crafted for different cravings and daily rituals"
-              description="From post-work munching to festive dessert moments, each category keeps the brand ready for both content and commerce."
-            />
-            <div className="card-grid three-up">
-              {categories.map((category) => (
-                <article key={category.title} className="glass-card feature-card">
-                  <div className="art-panel art-image-panel">
-                    <Image src={category.image} alt={category.alt} fill className="art-image" />
+        {/* Categories Section */}
+        <section className="section categories">
+          <div className="container">
+            <div className="section-header">
+              <span className="eyebrow">Categories</span>
+              <h2>Crafted for Different Cravings</h2>
+              <p>From post-work munching to festive dessert moments.</p>
+            </div>
+            <div className="card-grid three-col">
+              {categories.map((cat) => (
+                <article key={cat.title} className="category-card">
+                  <div className="category-img">
+                    <img src={cat.image} alt={cat.title} />
                   </div>
-                  <h3>{category.title}</h3>
-                  <p>{category.description}</p>
+                  <h3>{cat.title}</h3>
+                  <p>{cat.description}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="recipes" className="section">
+        {/* Products Section */}
+        <section id="shop" className="section products">
           <div className="container">
-            <SectionHeading
-              eyebrow="Featured Recipes"
-              title="Simple makhana recipes people actually want to save"
-              description="The editorial layer stays soft and premium, which gives the website room to grow into a full recipe hub later."
-            />
-            <div className="card-grid three-up">
+            <div className="section-header">
+              <span className="eyebrow">Our Products</span>
+              <h2>A Clean Product Grid</h2>
+              <p>Each card ready for ratings, inventory, and gifting.</p>
+            </div>
+            <div className="card-grid four-col">
+              {products.map((product) => (
+                <article key={product.title} className="product-card">
+                  <div className="product-img">
+                    {product.badge && <span className="product-badge">{product.badge}</span>}
+                    <img src={product.image} alt={product.title} />
+                  </div>
+                  <div className="product-info">
+                    <p className="product-note">{product.note}</p>
+                    <h3>{product.title}</h3>
+                    <div className="product-row">
+                      <strong>{product.price}</strong>
+                      <button className="add-btn">Add to cart</button>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section id="benefits" className="section benefits">
+          <div className="container split-section">
+            <div className="benefits-text">
+              <span className="eyebrow">Health Benefits</span>
+              <h2>The Superfood Side of Makhana</h2>
+              <p>These blocks keep the wellness messaging light, visual, and easy to trust.</p>
+              <div className="card-grid two-col">
+                {benefits.map((ben) => (
+                  <article key={ben.title} className="benefit-card">
+                    <span className="benefit-icon">{ben.icon}</span>
+                    <h3>{ben.title}</h3>
+                    <p>{ben.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div className="benefits-img">
+              <img 
+                src="https://images.unsplash.com/photo-1608492683726-1280ac73f860?w=500&h=600&fit=crop" 
+                alt="Healthy bowl with makhana" 
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Recipe Videos Section */}
+        <section id="recipes" className="section recipe-videos">
+          <div className="container">
+            <div className="section-header">
+              <span className="eyebrow">Video Recipes</span>
+              <h2>Learn to Make Makhana</h2>
+              <p>Step-by-step video recipes for perfect crispy makhana.</p>
+            </div>
+            <div className="video-grid">
+              {youtubeVideos.recipes.map((video) => (
+                <div key={video.id} className="video-card">
+                  <div className="video-wrapper">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <h3>{video.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Recipes Section */}
+        <section className="section recipes">
+          <div className="container">
+            <div className="section-header">
+              <span className="eyebrow">Featured Recipes</span>
+              <h2>Simple Makhana Recipes</h2>
+              <p>Transform your snacks into gourmet meals.</p>
+            </div>
+            <div className="card-grid three-col">
               {recipes.map((recipe) => (
-                <article key={recipe.title} className="glass-card recipe-card">
-                  <div className="art-panel art-image-panel">
-                    <Image src={recipe.image} alt={recipe.alt} fill className="art-image" />
+                <article key={recipe.title} className="recipe-card">
+                  <div className="recipe-img">
+                    <img src={recipe.image} alt={recipe.title} />
                   </div>
-                  <div className="recipe-meta">
-                    <h3>{recipe.title}</h3>
-                    <span>{recipe.accent}</span>
-                  </div>
+                  <h3>{recipe.title}</h3>
                   <p>{recipe.description}</p>
                 </article>
               ))}
@@ -305,211 +318,157 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="benefits" className="section lotus-band">
-          <div className="container split-layout">
-            <SectionHeading
-              eyebrow="Health Benefits"
-              title="The superfood side of makhana, without making the brand feel clinical"
-              description="These blocks keep the wellness messaging light, visual, and easy to trust, while still feeling on-brand."
-            />
-            <div className="card-grid two-up">
-              {benefits.map((benefit) => (
-                <article key={benefit.title} className="glass-card benefit-card">
-                  <div className="benefit-icon" aria-hidden="true">
-                    {benefit.icon}
-                  </div>
-                  <h3>{benefit.title}</h3>
-                  <p>{benefit.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="shop" className="section">
+        {/* Health Video Section */}
+        <section className="section health-video">
           <div className="container">
-            <div className="heading-row">
-              <SectionHeading
-                eyebrow="Product Showcase"
-                title="A clean product grid ready for e-commerce expansion"
-                description="Each card is lightweight today, but structured to grow into ratings, inventory, subscriptions, and gifting later."
-              />
-              <a href="#newsletter" className="simple-link">
-                Build your pantry
-              </a>
+            <div className="section-header">
+              <span className="eyebrow">Why Makhana?</span>
+              <h2>Discover the Health Benefits</h2>
+              <p>Learn why nutritionists call makhana a superfood.</p>
             </div>
-            <div className="card-grid four-up">
-              {products.map((product) => (
-                <article key={product.title} className="glass-card product-card">
-                  <div className={`product-pack ${product.packClass}`}>
-                    <div className="product-pack-bowl" />
-                  </div>
-                  <p className="product-note">{product.note}</p>
-                  <h3>{product.title}</h3>
-                  <div className="product-row">
-                    <strong>{product.price}</strong>
-                    <button type="button" className="button button-dark button-small">
-                      Add to cart
-                    </button>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="story" className="section">
-          <div className="container story-grid">
-            <article className="glass-card story-card">
-              <SectionHeading
-                eyebrow="Brand Story"
-                title="From the ponds of Bihar to a softer, smarter snack ritual"
-                description="Makhana Mingle begins where this ingredient has always belonged: in the pond belts of Bihar, where cultivation is patient, seasonal, and deeply local. We wanted to honor that origin while presenting makhana as a modern pantry icon people can feel proud to serve, gift, and snack on every day."
-              />
-              <div className="story-list">
-                {storyPoints.map((point) => (
-                  <div key={point} className="story-point">
-                    {point}
-                  </div>
-                ))}
+            <div className="video-single">
+              <div className="video-card">
+                <div className="video-wrapper">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${youtubeVideos.health[0].id}`}
+                    title="Makhana Health Benefits"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <h3>{youtubeVideos.health[0].title}</h3>
+                <p>From weight management to heart health - the complete guide.</p>
               </div>
-            </article>
-
-            <article className="glass-card map-card">
-              <p className="section-eyebrow">Bihar Origin</p>
-              <div className="map-panel">
-                <div className="story-image-wrap">
-                  <Image
-                    src="/bihar-pond.svg"
-                    alt="Illustrated Bihar pond landscape inspired by makhana cultivation"
-                    fill
-                    className="story-image"
-                  />
-                </div>
-                <div className="map-top">
-                  <div>
-                    <h3>Darbhanga</h3>
-                    <p>
-                      One of the regions closely associated with India&apos;s makhana cultivation
-                      heritage.
-                    </p>
-                  </div>
-                  <span className="map-chip">Source map</span>
-                </div>
-                <div className="map-mini-grid">
-                  <div>
-                    <strong>Harvesting</strong>
-                    <p>Pond-grown seeds collected, dried, popped, and cleaned.</p>
-                  </div>
-                  <div>
-                    <strong>Roasting</strong>
-                    <p>Small-batch finishing for a fresher, more premium texture.</p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container">
-            <SectionHeading
-              eyebrow="Testimonials"
-              title="Warm reviews from people who want healthy snacks to still feel joyful"
-              description="The social proof is styled to feel editorial and premium, not loud or overdesigned."
-            />
-            <div className="card-grid three-up">
-              {testimonials.map((testimonial) => (
-                <article key={testimonial.name} className="glass-card testimonial-card">
-                  <p className="stars">★★★★★</p>
-                  <p className="testimonial-quote">“{testimonial.quote}”</p>
-                  <div className="testimonial-author">
-                    <strong>{testimonial.name}</strong>
-                    <span>{testimonial.detail}</span>
-                  </div>
-                </article>
-              ))}
             </div>
           </div>
         </section>
 
-        <section id="newsletter" className="section">
+        {/* Story Section */}
+        <section id="story" className="section story">
           <div className="container">
-            <div className="newsletter-card">
-              <p className="section-eyebrow">Newsletter Signup</p>
-              <h2>Join the Mingle</h2>
+            <div className="story-content">
+              <span className="eyebrow">Brand Story</span>
+              <h2>From the Ponds of Bihar</h2>
               <p>
-                Get new recipes, wellness notes, and first access to small-batch flavors before
-                they disappear.
+                Makhana Mingle begins where this ingredient has always belonged: in the pond belts of Bihar, 
+                where cultivation is patient, seasonal, and deeply local. We wanted to honor that origin while 
+                presenting makhana as a modern pantry icon people can feel proud to serve, gift, and snack on every day.
               </p>
+              <div className="story-points">
+                <div className="story-point">
+                  <strong>Sourced from Bihar</strong>
+                  <p>From ponds across Bihar, where makhana cultivation has deep generational roots.</p>
+                </div>
+                <div className="story-point">
+                  <strong>Small Batch Roasted</strong>
+                  <p>Roasted in smaller batches to keep the bite airy, crisp, and naturally satisfying.</p>
+                </div>
+                <div className="story-point">
+                  <strong>Modern Indian Brand</strong>
+                  <p>Built as a modern Indian pantry brand balancing wellness, nostalgia, and design.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Story Video Section */}
+        <section className="section story-video">
+          <div className="container">
+            <div className="section-header">
+              <span className="eyebrow">The Journey</span>
+              <h2>From Bihar Ponds to Your Plate</h2>
+              <p>Discover how makhana goes from seed to snack.</p>
+            </div>
+            <div className="video-single">
+              <div className="video-card">
+                <div className="video-wrapper">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${youtubeVideos.story[0].id}`}
+                    title="Bihar Makhana Production"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <h3>{youtubeVideos.story[0].title}</h3>
+                <p>Over 85% of India&apos;s makhana comes from Bihar, especially from the Darbhanga region.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="section testimonials">
+          <div className="container">
+            <div className="section-header">
+              <span className="eyebrow">Testimonials</span>
+              <h2>Warm Reviews from Happy Customers</h2>
+              <p>People who want healthy snacks to still feel joyful.</p>
+            </div>
+            <div className="card-grid three-col">
+              {testimonials.map((t) => (
+                <article key={t.name} className="testimonial-card">
+                  <div className="stars">★★★★★</div>
+                  <p className="quote">&ldquo;{t.quote}&rdquo;</p>
+                  <div className="author">
+                    <strong>{t.name}</strong>
+                    <span>{t.role}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter Section */}
+        <section id="newsletter" className="section newsletter">
+          <div className="container">
+            <div className="newsletter-box">
+              <h2>Join the Mingle</h2>
+              <p>Get new recipes, wellness notes, and first access to small-batch flavors before they disappear.</p>
               <form className="newsletter-form">
                 <input type="email" placeholder="Enter your email" />
-                <button type="submit" className="button button-dark">
-                  Subscribe
-                </button>
+                <button type="submit" className="btn btn-primary">Subscribe</button>
               </form>
-              <p className="newsletter-caption">No spam, only pantry notes worth opening.</p>
+              <p className="newsletter-note">No spam, only pantry notes worth opening.</p>
             </div>
           </div>
         </section>
       </main>
 
+      {/* Footer */}
       <footer className="footer">
         <div className="container footer-grid">
-          <div>
-            <div className="brand-lockup footer-lockup">
-              <Image src="/logo-mark.svg" alt="Makhana Mingle logo" width={44} height={44} />
-              <p className="brand-wordmark footer-brand">Makhana Mingle</p>
-            </div>
-            <p className="footer-copy">
-              A modern Indian food brand shaping healthier snacking through makhana, recipes, and
-              slow-crafted pantry experiences.
-            </p>
-            <div className="footer-links">
-              <a href="#newsletter">Instagram</a>
-              <a href="#recipes">Pinterest</a>
-              <a href="#story">LinkedIn</a>
-            </div>
-            <div className="footer-modal-actions">
-              <FooterInfoModal
-                title={developerDetails.title}
-                description={developerDetails.description}
-                bullets={developerDetails.bullets}
-                links={developerDetails.links}
-                triggerLabel="About the Developer"
-              />
-              <FooterInfoModal
-                title={projectDetails.title}
-                description={projectDetails.description}
-                bullets={projectDetails.bullets}
-                triggerLabel="About the Project"
-              />
+          <div className="footer-brand">
+            <h3>Makhana Mingle</h3>
+            <p>A modern Indian food brand shaping healthier snacking through makhana, recipes, and slow-crafted pantry experiences.</p>
+            <div className="social-links">
+              <a href="#">📷</a>
+              <a href="#">🐦</a>
+              <a href="#">🔗</a>
             </div>
           </div>
           <div>
-            <p className="footer-heading">Shop</p>
-            <div className="footer-stack">
-              <a href="#shop">All Snacks</a>
-              <a href="#shop">Gift Boxes</a>
-              <a href="#shop">Best Sellers</a>
-            </div>
+            <h4>Shop</h4>
+            <a href="#shop">All Snacks</a>
+            <a href="#shop">Gift Boxes</a>
+            <a href="#shop">Best Sellers</a>
           </div>
           <div>
-            <p className="footer-heading">Content</p>
-            <div className="footer-stack">
-              <a href="#recipes">Recipes</a>
-              <a href="#benefits">Health Benefits</a>
-              <a href="#story">Brand Story</a>
-            </div>
+            <h4>Content</h4>
+            <a href="#recipes">Recipes</a>
+            <a href="#benefits">Health Benefits</a>
+            <a href="#story">Brand Story</a>
           </div>
           <div>
-            <p className="footer-heading">Contact</p>
-            <div className="footer-stack">
-              <a href="mailto:hello@makhanamingle.com">hello@makhanamingle.com</a>
-              <p>Gurgaon</p>
-              <p>+91 94682 09127</p>
-            </div>
+            <h4>Contact</h4>
+            <p>hello@makhanamingle.com</p>
+            <p>Gurgaon</p>
+            <p>+91 94682 09127</p>
           </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; 2024 Makhana Mingle. Crafted for the Artisanal Pantry.</p>
         </div>
       </footer>
     </div>
