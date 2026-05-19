@@ -291,7 +291,7 @@ export const footerSections: FooterSection[] = [
     ],
   },
   {
-    title: "Content",
+    title: "Quick Links",
     links: [
       { label: "Recipes", href: "#recipes" },
       { label: "Health Benefits", href: "#benefits" },
@@ -306,6 +306,23 @@ export const footerSections: FooterSection[] = [
       { label: "Contact", href: "#footer" },
       { label: "Terms", href: "#" },
       { label: "Privacy", href: "#" },
+    ],
+  },
+  {
+    title: "About",
+    links: [
+      { label: "Makhana Mingle", href: "#" },
+      { label: "Our Story", href: "#story" },
+      { label: "Sustainability", href: "#" },
+      { label: "Careers", href: "#" },
+    ],
+  },
+  {
+    title: "Developer",
+    links: [
+      { label: "Mohit's Portfolio", href: "https://mohitsoni.dev" },
+      { label: "View Source Code", href: "https://github.com/sonimohit481/Makhana-Mingle" },
+      { label: "Contact Developer", href: "mailto:mohit@getlon.com" },
     ],
   },
 ];
