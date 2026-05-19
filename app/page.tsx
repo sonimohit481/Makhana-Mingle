@@ -34,13 +34,10 @@ export default function Home() {
               <p>From post-work munching to festive dessert moments.</p>
             </div>
             <div className="card-grid three-col">
-              {categories.map((cat, idx) => (
+              {categories.map((cat) => (
                 <article key={cat.title} className="category-card">
                   <div className="category-img">
-                    <img 
-                      src={["/recipe-roast.svg", "/recipe-kheer.svg", "/recipe-mix.svg"][idx]} 
-                      alt={cat.title} 
-                    />
+                    <img src={cat.image} alt={cat.title} />
                   </div>
                   <h3>{cat.title}</h3>
                   <p>{cat.description}</p>
@@ -58,14 +55,11 @@ export default function Home() {
               <p>Each card ready for ratings, inventory, and gifting.</p>
             </div>
             <div className="card-grid four-col">
-              {products.map((product, idx) => (
+              {products.map((product) => (
                 <article key={product.title} className="product-card">
                   <div className="product-img">
                     {product.badge && <span className="product-badge">{product.badge}</span>}
-                    <img 
-                      src={["/recipe-roast.svg", "/recipe-mix.svg", "/recipe-kheer.svg", "/hero-bowl.svg"][idx % 4]} 
-                      alt={product.title} 
-                    />
+                    <img src={product.image} alt={product.title} />
                   </div>
                   <div className="product-info">
                     <p className="product-note">{product.note}</p>
