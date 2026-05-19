@@ -2,6 +2,9 @@ import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/hero";
 import { RecipeFilter } from "@/components/recipe-filter";
 import { VideoEmbed, VideoGrid } from "@/components/video-embed";
+import { Timeline } from "@/components/timeline";
+import { Newsletter } from "@/components/newsletter";
+import { Footer } from "@/components/footer";
 import {
   navLinks,
   categories,
@@ -10,6 +13,7 @@ import {
   recipes,
   testimonials,
   youtubeVideos,
+  timeline,
   footerSections,
 } from "@/data/content";
 
@@ -154,6 +158,7 @@ export default function Home() {
                   <p>Built as a modern Indian pantry brand balancing wellness, nostalgia, and design.</p>
                 </div>
               </div>
+              <Timeline events={timeline} />
             </div>
           </div>
         </section>
@@ -193,45 +198,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="newsletter" className="section newsletter">
-          <div className="container">
-            <div className="newsletter-box">
-              <h2>Join the Mingle</h2>
-              <p>Get new recipes, wellness notes, and first access to small-batch flavors before they disappear.</p>
-              <form className="newsletter-form">
-                <input type="email" placeholder="Enter your email" />
-                <button type="submit" className="btn btn-primary">Subscribe</button>
-              </form>
-              <p className="newsletter-note">No spam, only pantry notes worth opening.</p>
-            </div>
-          </div>
-        </section>
+        <Newsletter />
       </main>
 
-      <footer className="footer" id="footer">
-        <div className="container footer-grid">
-          <div className="footer-brand">
-            <h3>Makhana Mingle</h3>
-            <p>A modern Indian food brand shaping healthier snacking through makhana, recipes, and slow-crafted pantry experiences.</p>
-            <div className="social-links">
-              <a href="#">📷</a>
-              <a href="#">🐦</a>
-              <a href="#">🔗</a>
-            </div>
-          </div>
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h4>{section.title}</h4>
-              {section.links.map((link) => (
-                <a key={link.label} href={link.href}>{link.label}</a>
-              ))}
-            </div>
-          ))}
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; 2024 Makhana Mingle. Crafted for the Artisanal Pantry.</p>
-        </div>
-      </footer>
+      <Footer sections={footerSections} />
     </div>
   );
 }
