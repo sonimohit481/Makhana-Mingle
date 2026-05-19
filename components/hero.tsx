@@ -26,7 +26,7 @@ export function Hero() {
         <div className="hero-visual">
           <div className="hero-image-box">
             <img 
-              src="/hero-bowl.svg" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyXR65zOFPE73hn6Bkx9SsK3d_4YGxaheYIhBzu327cSXJ39DxIMfOaOeKOWo74881FX1hI3ZWYZAU0GQWpfIvLy5ghCRAka2gUlhtXLVu9mwetqpsdliHC67OO0OPMyTbsqY5Hvxl9BpLskYCEf5bsdcdLPOTJf6W2KKP7d4ew-rNaGFIysaAH0ovodAQ729oBoqh-GduZGhq72w_VXLEVEiTePuyIM8eRApiBnNbVNBUFzUwrhQR7wZq1w7S4qEokX_TDnFQR_Y" 
               alt="Roasted Makhana bowl" 
             />
           </div>
