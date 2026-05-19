@@ -26,8 +26,8 @@ export function Hero() {
         <div className="hero-visual">
           <div className="hero-image-box">
             <img 
-              src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&h=600&fit=crop" 
-              alt="Roasted Makhana" 
+              src="/hero-bowl.svg" 
+              alt="Roasted Makhana bowl" 
             />
           </div>
           <div className="hero-badge">

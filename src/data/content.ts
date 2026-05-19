@@ -21,17 +21,17 @@ export const categories: Category[] = [
   {
     title: "Flavored Makhana",
     description: "Bold seasoning blends for evening cravings and modern pantry shelves.",
-    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&h=750&fit=crop",
+    image: "/recipe-roast.svg",
   },
   {
     title: "Traditional Recipes",
     description: "Slow, rooted comfort inspired by home kitchens and festive desserts.",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&h=750&fit=crop",
+    image: "/recipe-kheer.svg",
   },
   {
     title: "Diet Snacks",
     description: "Light, crisp combinations designed for mindful daily snacking.",
-    image: "https://images.unsplash.com/photo-1608492683726-1280ac73f860?w=600&h=750&fit=crop",
+    image: "/recipe-mix.svg",
   },
 ];
 
@@ -41,49 +41,49 @@ export const products: Product[] = [
     note: "Roasted to golden perfection with sea salt",
     price: "₹249",
     badge: "BESTSELLER",
-    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&h=400&fit=crop",
+    image: "/recipe-roast.svg",
   },
   {
     title: "Spicy Peri Peri",
     note: "Fiery blend of African birds eye chili",
     price: "₹279",
-    image: "https://images.unsplash.com/photo-1603052879368-f2927f4c2e13?w=400&h=400&fit=crop",
+    image: "/recipe-mix.svg",
   },
   {
     title: "Creamy Cheese",
     note: "Rich white cheddar with herbs",
     price: "₹299",
-    image: "https://images.unsplash.com/photo-1606284305952-d5af49a20404?w=400&h=400&fit=crop",
+    image: "/recipe-kheer.svg",
   },
   {
     title: "Mint Pudina",
     note: "Refreshing mint and lemon twist",
     price: "₹259",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=400&fit=crop",
+    image: "/hero-bowl.svg",
   },
   {
     title: "Tandoori Masala",
     note: "Smoky tandoori spice blend",
     price: "₹269",
-    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&h=400&fit=crop",
+    image: "/recipe-roast.svg",
   },
   {
     title: "Chaat Masala",
     note: "Tangy Indian street food spice",
     price: "₹259",
-    image: "https://images.unsplash.com/photo-1603052879368-f2927f4c2e13?w=400&h=400&fit=crop",
+    image: "/recipe-mix.svg",
   },
   {
     title: "Butter Chicken",
     note: "Rich creamy tomato and spice",
     price: "₹289",
-    image: "https://images.unsplash.com/photo-1606284305952-d5af49a20404?w=400&h=400&fit=crop",
+    image: "/recipe-kheer.svg",
   },
   {
     title: "Lemon Pepper",
     note: "Zesty citrus with cracked pepper",
     price: "₹249",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=400&fit=crop",
+    image: "/hero-bowl.svg",
   },
 ];
 
@@ -124,7 +124,7 @@ export const recipes: Recipe[] = [
   {
     title: "Masala Roast Makhana",
     description: "Chilli, curry leaf, and toasted makhana for a quick chai-time crunch.",
-    image: "https://images.unsplash.com/photo-1606284305952-d5af49a20404?w=600&h=400&fit=crop",
+    image: "/recipe-roast.svg",
     cookTime: "10 min",
     difficulty: "Easy",
     ingredients: ["Makhana", "Ghee", "Chilli powder", "Curry leaves", "Salt"],
@@ -132,7 +132,7 @@ export const recipes: Recipe[] = [
   {
     title: "Makhana Kheer",
     description: "A creamy dessert with cardamom, saffron, and nutty bite.",
-    image: "https://images.unsplash.com/photo-1603052879368-f2927f4c2e13?w=600&h=400&fit=crop",
+    image: "/recipe-kheer.svg",
     cookTime: "45 min",
     difficulty: "Medium",
     ingredients: ["Makhana", "Milk", "Sugar", "Cardamom", "Saffron", "Almonds"],
@@ -140,7 +140,7 @@ export const recipes: Recipe[] = [
   {
     title: "Trail Mix Chaat",
     description: "Fox nuts, seeds, herbs, and citrus for an energizing afternoon bite.",
-    image: "https://images.unsplash.com/photo-1608492683726-1280ac73f860?w=600&h=400&fit=crop",
+    image: "/recipe-mix.svg",
     cookTime: "5 min",
     difficulty: "Easy",
     ingredients: ["Makhana", "Chickpeas", "Pomegranate", "Coriander", "Lemon"],
@@ -148,7 +148,7 @@ export const recipes: Recipe[] = [
   {
     title: "Makhana Poha",
     description: "Flattened rice meets fox nuts in a wholesome breakfast bowl.",
-    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&h=400&fit=crop",
+    image: "/recipe-roast.svg",
     cookTime: "20 min",
     difficulty: "Medium",
     ingredients: ["Makhana", "Poha", "Onion", "Peanuts", "Curry leaves", "Mustard"],
@@ -156,7 +156,7 @@ export const recipes: Recipe[] = [
   {
     title: "Makhana Tikki",
     description: "Crispy patties made with mashed makhana and vegetables.",
-    image: "https://images.unsplash.com/photo-1603052879368-f2927f4c2e13?w=600&h=400&fit=crop",
+    image: "/recipe-kheer.svg",
     cookTime: "30 min",
     difficulty: "Medium",
     ingredients: ["Makhana", "Potato", "Green peas", "Ginger", "Green chilli"],
@@ -164,7 +164,7 @@ export const recipes: Recipe[] = [
   {
     title: "Makhana Ladoo",
     description: "Sweet energy balls with nuts and jaggery.",
-    image: "https://images.unsplash.com/photo-1606284305952-d5af49a20404?w=600&h=400&fit=crop",
+    image: "/recipe-mix.svg",
     cookTime: "25 min",
     difficulty: "Easy",
     ingredients: ["Makhana", "Jaggery", "Ghee", "Almonds", "Cardamom"],
@@ -172,7 +172,7 @@ export const recipes: Recipe[] = [
   {
     title: "Crispy Makhana Chivda",
     description: "Light and crunchy poha-based snack with fox nuts.",
-    image: "https://images.unsplash.com/photo-1608492683726-1280ac73f860?w=600&h=400&fit=crop",
+    image: "/recipe-roast.svg",
     cookTime: "15 min",
     difficulty: "Easy",
     ingredients: ["Makhana", "Poha", "Peanuts", "Curry leaves", "Turmeric"],
@@ -180,7 +180,7 @@ export const recipes: Recipe[] = [
   {
     title: "Makhana Smoothie Bowl",
     description: "Creamy overnight soaked makhana with fruits and seeds.",
-    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&h=400&fit=crop",
+    image: "/hero-bowl.svg",
     cookTime: "10 min",
     difficulty: "Easy",
     ingredients: ["Makhana", "Banana", "Almond milk", "Chia seeds", "Honey"],

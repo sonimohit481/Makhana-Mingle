@@ -33,10 +33,13 @@ export default function Home() {
               <p>From post-work munching to festive dessert moments.</p>
             </div>
             <div className="card-grid three-col">
-              {categories.map((cat) => (
+              {categories.map((cat, idx) => (
                 <article key={cat.title} className="category-card">
                   <div className="category-img">
-                    <img src={cat.image} alt={cat.title} />
+                    <img 
+                      src={["/recipe-roast.svg", "/recipe-kheer.svg", "/recipe-mix.svg"][idx]} 
+                      alt={cat.title} 
+                    />
                   </div>
                   <h3>{cat.title}</h3>
                   <p>{cat.description}</p>
@@ -54,11 +57,14 @@ export default function Home() {
               <p>Each card ready for ratings, inventory, and gifting.</p>
             </div>
             <div className="card-grid four-col">
-              {products.map((product) => (
+              {products.map((product, idx) => (
                 <article key={product.title} className="product-card">
                   <div className="product-img">
                     {product.badge && <span className="product-badge">{product.badge}</span>}
-                    <img src={product.image} alt={product.title} />
+                    <img 
+                      src={["/recipe-roast.svg", "/recipe-mix.svg", "/recipe-kheer.svg", "/hero-bowl.svg"][idx % 4]} 
+                      alt={product.title} 
+                    />
                   </div>
                   <div className="product-info">
                     <p className="product-note">{product.note}</p>
@@ -92,8 +98,8 @@ export default function Home() {
             </div>
             <div className="benefits-img">
               <img 
-                src="https://images.unsplash.com/photo-1608492683726-1280ac73f860?w=500&h=600&fit=crop" 
-                alt="Healthy bowl with makhana" 
+                src="/bihar-pond.svg" 
+                alt="Makhana pond cultivation" 
               />
             </div>
           </div>
